@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+	<base href="/" />
+	<title>Название сайта->Услуги</title>
+	<meta charset="utf-8" />
+				<script src="/media/js/jQuery.js"></script> 	
+				<link rel="stylesheet" type="text/css" media="screen" href="/v/themes/lang/media/css/style.css" /> 	
+			<link rel="stylesheet" type="text/css" media="screen" href="/v/themes/lang/media/css/lightbox.css" /> 	
+			<link rel="stylesheet" type="text/css" media="screen" href="/v/themes/lang/media/css/navbar.css" /> 	
+				<script src="/v/themes/lang/media/js/html5shiv.js"></script> 	
+			<script src="/v/themes/lang/media/js/lightbox-2.6.min.js"></script> 	
+			<script src="/v/themes/lang/media/js/jquery.cycle2.min.js"></script> 	
+		
+	
+	<meta name="keywords" content="Услуги">
+	<meta name="description" content="Услуги">	
+</head>
+  <body>
+    
+    <section class="wrapper">
+          <header class="header">
+        <div class="header__logo"><a href="/ru">DofC</a></div>
+        <div class="header__contacts">
+          8911111111122<br>
+        </div>
+        <div class="header__title">
+        	 <h2>Название сайта</h2><br>
+        	Сайт что-то
+			<div id="langs">
+									<a href="/en/services">
+						<img src="/v/themes/lang/media/images/en.png" 
+							 >
+					</a>
+									<a href="/ru/services">
+						<img src="/v/themes/lang/media/images/ru.png" 
+							 class="lang_active"  >
+					</a>
+									<a href="/sp/services">
+						<img src="/v/themes/lang/media/images/sp.png" 
+							 >
+					</a>
+									<a href="/fr/services">
+						<img src="/v/themes/lang/media/images/fr.png" 
+							 >
+					</a>
+							</div>
+        </div>
+        <div class="header__line">
+			<ul>
+															<li  
+							
+						>
+							<a href="/ru/contacts">
+								<span >   Новые Контакты   </span>
+							</a> 
+						</li>
+																				<li  
+							
+						>
+							<a href="/ru/home">
+								<span > Главная      </span>
+							</a> 
+						</li>
+																				<li  class="active expanded"  
+							
+						>
+							<a href="/ru/services">
+								<span > Услуги </span>
+							</a> 
+						</li>
+																				<li  
+							
+						>
+							<a href="/ru/products/computers/base">
+								<span > Стационарные </span>
+							</a> 
+						</li>
+												</ul>
+          <form class="header__search" action="search" method="post">
+            <input type="text" name="search" placeholder="Поиск" />
+            <button type="submit">Найти</button>
+          </form>
+        </div>
+        
+      </header>
+
+      <section class="main">
+        <section class="content">
+       		<div  class="some_class a b c">
+	<h2>
+		<span >Услуги</span>
+		<a href="javascript:window.print();" class="print" title="Print this page">Print</a>
+	</h2>
+	<div >
+		<p>Услуги</p>
+
+<p>kjvjhfjgkj<img alt="" height="213" src="/media/images/ck/ba20a98ffea8.jpg" width="285" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>nvjhvhjvjh</p>
+
+<p><div class="gallery">
+<div class="gallery__item">
+  <a href="/media/gallery/big/7890804.jpg" data-lightbox="roadtrip" rel="gallery">
+  	<img src="/media/gallery/small/7890804.jpg" width="220" height="220" alt="Зимой он без лепестков" title=""/>
+  </a>
+</div>
+<div class="gallery__item">
+  <a href="/media/gallery/big/6273206.jpg" data-lightbox="roadtrip" rel="gallery">
+  	<img src="/media/gallery/small/6273206.jpg" width="220" height="220" alt="" title=""/>
+  </a>
+</div>
+<div class="gallery__item">
+  <a href="/media/gallery/big/8084266.jpg" data-lightbox="roadtrip" rel="gallery">
+  	<img src="/media/gallery/small/8084266.jpg" width="220" height="220" alt="" title=""/>
+  </a>
+</div>
+<div class="gallery__item">
+  <a href="/media/gallery/big/7027612.jpg" data-lightbox="roadtrip" rel="gallery">
+  	<img src="/media/gallery/small/7027612.jpg" width="220" height="220" alt="" title=""/>
+  </a>
+</div>
+<div class="gallery__item">
+  <a href="/media/gallery/big/2112795.jpg" data-lightbox="roadtrip" rel="gallery">
+  	<img src="/media/gallery/small/2112795.jpg" width="220" height="220" alt="" title=""/>
+  </a>
+</div>
+<div class="gallery__item">
+  <a href="/media/gallery/big/3562331.jpg" data-lightbox="roadtrip" rel="gallery">
+  	<img src="/media/gallery/small/3562331.jpg" width="220" height="220" alt="" title=""/>
+  </a>
+</div>
+</div></p>
+
+<p>&nbsp;</p>
+
+	</div>
+</div>
+
+    		</section>
+		<section class="sidebar">
+          
+          <nav class="sidebar__menu">
+            <ul class="sidebar__menu-list">
+								  				  <li  
+						
+				  >
+					<a href="/ru/services/repair">
+						<span >  Ремонт  </span>
+					</a>  
+					 				 </li>
+									 				  				  <li  
+						
+				  >
+					<a href="/ru/services/utilization">
+						<span > Утилизация </span>
+					</a>  
+					 				 </li>
+									 				  				  <li  
+						
+				  >
+					<a href="/ru/services/software">
+						<span > Установка ПО  </span>
+					</a>  
+					 				 </li>
+									             </ul>
+          </nav>     
+    	</section>
+        
+      </section>
+
+      <footer class="footer">
+		<div class="footer__contacts">
+			Ещё какой-нибудь текст в подвале
+        </div>
+        
+        <div class="footer__copyright">
+        	Текст в подвале с каким-ни копирайтом ©
+        </div>
+        
+        <div class="footer__developer">
+        	Кем-то создано в натуре так
+        </div>
+      </footer>
+
+</body>
+</html>

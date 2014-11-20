@@ -1,0 +1,1 @@
+<div class="flexslider">	<ul class="slides">		{% for img in images %}		  <li>			<img src="/{{C.IMG_DIR}}{{img.path}}" alt="{{img.alt}}" />			<div class="desc">			  <h1>{{img.title_image}}</h1>			</div>		  </li>		{% endfor %}	</ul></div>

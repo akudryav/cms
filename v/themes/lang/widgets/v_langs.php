@@ -1,0 +1,1 @@
+<div id="langs">	{% for lang, key in langs %}		<a href="/{{lang~return}}">			<img src="/v/themes/{{C.CURENT_THEME}}/media/images/{{lang}}.png" {% if key == current %} class="lang_active" {% endif %} >		</a>	{% endfor %}</div>

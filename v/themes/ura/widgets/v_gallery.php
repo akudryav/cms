@@ -1,0 +1,1 @@
+<div class="gallery">{% for img in images %}<div class="gallery__item">  <a href="/{{C.IMG_DIR}}{{img.path}}" data-lightbox="roadtrip" rel="gallery">  	<img src="/{{C.IMG_SMALL_DIR}}{{img.path}}" width="220" height="220" alt="{{img.alt}}" title="{{img.title_image}}"/>  </a></div>{% endfor %}</div>

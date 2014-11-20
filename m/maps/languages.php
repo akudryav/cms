@@ -1,0 +1,1 @@
+<?php	return array(		'en' => 1,		'ru' => 2,		'sp' => 3,		'fr' => 4 	);

@@ -1,0 +1,1 @@
+<?php	return array(		'tables' => array(						'users' => 'Пользователя',						'articles' => 'Статьи',						'pages' => 'Страницы',						'images' => 'Картинки'					),		'actions' => array(						'add' => 'Добавил',						'edit' => 'Отредакторовал',						'delete' => 'Удалил',					)	);
