@@ -1,3 +1,5 @@
+.idea/
+.DS_Store
 v/themes/lang/twig_cache
 media/logs
 media/docs
