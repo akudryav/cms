@@ -1,8 +1,8 @@
 <h1>Добавить документ</h1>
 
-<? foreach($errors as $error): ?>
+<?php foreach($errors as $error): ?>
 	<p class="error"><?=$error?></p>
-<? endforeach; ?>
+<?php endforeach; ?>
 <form method="post" id="fileloaded">
 	<div class="control-group">
 		<label class="control-label" for="title">Title</label>
@@ -17,7 +17,7 @@
 	(allowed formats: 'pdf')
 	<br/>
 	<br/>
-	<input name="is_show" type="checkbox" <? if($fields['is_show']) echo 'checked';?> /> Show on the site
+	<input name="is_show" type="checkbox" <?php if($fields['is_show']) echo 'checked';?> /> Show on the site
 	<br/>
 	<br/>
 	<input type="submit"  id="btnSubmit" class="btn btn-success" value="Add"/>

@@ -153,7 +153,7 @@ abstract class I18n extends Model
 		$obj['id_lang'] = $current;
 		
 		if($find_show){
-			if(isset($obj['is_show']) && !empty($obj['is_show']))
+			if(isset($obj['is_show']))
 				$show = $obj['is_show'];
 			
 			if($show == 'on')

@@ -2,9 +2,9 @@
 	<form method="post">
 	<h2>Создание нового текста</h2><br>
 		<div class="control-group">
-			<? foreach($messages as $message): ?>
+			<?php foreach($messages as $message): ?>
 				<p class="error"><?=$message?></p>
-			<? endforeach;?>
+			<?php endforeach;?>
 			
 		<input type="hidden" name="dt" value="<?=$fields['dt']?>">
 			<label class="control-label" for="alias">Алиас</label>

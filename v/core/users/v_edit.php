@@ -1,9 +1,9 @@
 <h2>Редактирование данных пользователя: <?=$fields['login']?></h2></br>
-<? if (count($messages) > 0): ?>
-	<? foreach($messages as $message): ?>
+<?php if (count($messages) > 0): ?>
+	<?php foreach($messages as $message): ?>
 		<p class="error"><?=$message?></p>
-	<? endforeach;?>
-<? endif ?>
+	<?php endforeach;?>
+<?php endif ?>
 <form method="post">
 	<div class="control-group">
 		<label class="control-label" for="login">Логин</label>
@@ -29,11 +29,11 @@
 		<div class="controls">
 			<div class="input-prepend">
 				<select name="id_role">
-					<? foreach($roles as $key => $role): ?>
-						<option value="<?=$key+1?>" <?php if($role['id_role'] == $fields['id_role']) echo 'selected';?>>
+					<?php foreach($roles as $key => $role): ?>
+						<option value="<?=$key+1?>" <?php  if($role['id_role'] == $fields['id_role']) echo 'selected';?>>
 							<?=$role['description']?>
 						</option>
-					<? endforeach ?>
+					<?php endforeach ?>
 				</select>
 			</div>
 		</div>

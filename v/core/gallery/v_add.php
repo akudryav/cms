@@ -2,11 +2,11 @@
 	<form method="post">
 	<h2>Создание новой галереи</h2><br>
 		<div class="control-group">
-		<? if (count($messages) > 0): ?>
-			<? foreach($messages as $message): ?>
+		<?php if (count($messages) > 0): ?>
+			<?php foreach($messages as $message): ?>
 				<p class="error"><?=$message?></p>
-			<? endforeach;?>
-		<? endif ?>
+			<?php endforeach;?>
+		<?php endif ?>
 			<label class="control-label" for="name">Имя в системе</label>
 			<div class="controls">
 				<div class="input-prepend">

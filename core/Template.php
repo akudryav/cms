@@ -1,4 +1,6 @@
 <?php
+require_once  'vendor/autoload.php';
+
 class Template
 {
 	private $base_template_path;
@@ -45,13 +47,31 @@ class Template
 	}
 	
 	private function twig_init(){
-		$loader = new Twig_Loader_Filesystem("v/{$this->base_template_path}");
-		$this->twig = new Twig_Environment($loader, array(
+		$loader = new \Twig\Loader\FilesystemLoader("v/{$this->base_template_path}");
+		$this->twig = new \Twig\Environment($loader, array(
 			'cache' => "v/{$this->base_template_path}twig_cache",
 			'auto_reload' => true,
 			'autoescape' => false
 		));
-		$this->twig->addGlobal('S', new Twig_CMSStaticExecution());
-		$this->twig->addGlobal('C', new Twig_CMSConstant());
+		// для вызова своих функций
+		$function = new \Twig\TwigFunction('text', function ($a) {
+		        return Helpers::text($a);
+		});
+		$this->twig->addFunction($function);
+
+		$function = new \Twig\TwigFunction('front_field', function ($a, $b) {
+		        return Helpers::front_field($a, $b);
+		});
+		$this->twig->addFunction($function);
+
+		$function = new \Twig\TwigFunction('front_widget', function ($a, $b) {
+		        return Helpers::front_widget($a, $b);
+		});
+		$this->twig->addFunction($function);
+
+		$function = new \Twig\TwigFunction('assoc', function () {
+		        return I18n::assoc();
+		});
+		$this->twig->addFunction($function);
 	}
 }

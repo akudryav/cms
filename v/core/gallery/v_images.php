@@ -5,10 +5,10 @@
 		<input type="button" id="btn_save" value="Сохранить сортировку" class="btn btn-danger">
 		<span id="msg_save">Сохранено</span>
 	</div>
-	<? if(count($images) > 0):?>
+	<?php if(count($images) > 0):?>
 		<ul id="gallery_sortable" class="noicons noshifts">
-		<? foreach($images as $img):?>
-			<li class="delimg <? if(!$img['is_show']) echo 'no_public_img';?> id_image="<?=$img['id_image']?>">
+		<?php foreach($images as $img):?>
+			<li class="delimg <?php if(!$img['is_show']) echo 'no_public_img';?> id_image="<?=$img['id_image']?>">
 				<form method="post">
 					<input type="submit" class="delete" value="" onClick="javascript: return confirm('Вы действительно хотите удалить?  Данное действие удалит изображение со всех языковых версий!')">
 					<input type="hidden" name="id_gallery" value="<?=$img['id_gallery']?>">
@@ -18,11 +18,11 @@
 				<img class="im" src="<?=IMG_SMALL_DIR . $img['path']?>">
 				
 			</li>
-		<? endforeach ?>
+		<?php endforeach ?>
 		</ul>
-	<? else: ?>
+	<?php else: ?>
 		<p>В галерее нет изображений</p>
-	<? endif; ?>
+	<?php endif; ?>
 </div>
 <div class="clear"></div><br>
 <p>Для изменения последовательности показа переместите изображения.</p><br>

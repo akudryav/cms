@@ -1,8 +1,8 @@
 <h2>Редактирование новости</h2>
 
-<? foreach($errors as $error): ?>
+<?php foreach($errors as $error): ?>
 	<p class="error"><?=$error?></p>
-<? endforeach; ?>
+<?php endforeach; ?>
 
 <div id="usersettings">
 	
@@ -40,17 +40,17 @@
 			</div>
 		</div>
 		<textarea id="replace" rows="8" name="content"><?=$fields['content']?></textarea><br>
-		<!--<input type="checkbox" name="is_show" <? if($fields['is_show']) echo 'checked'; ?> > Опубликована-->
+		<!--<input type="checkbox" name="is_show" <?php if($fields['is_show']) echo 'checked'; ?> > Опубликована-->
         <label class="radio">
-          <input type="radio" name="is_show" value="1" <?if($fields['is_show']=='1') echo 'checked';?>>
+          <input type="radio" name="is_show" value="1" <?php if($fields['is_show']=='1') echo 'checked';?>>
           Отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="0" <?if($fields['is_show']=='0') echo 'checked';?>>
+          <input type="radio" name="is_show" value="0" <?php if($fields['is_show']=='0') echo 'checked';?>>
           Не отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="2" <?if($fields['is_show'] == '2') echo 'checked';?>>
+          <input type="radio" name="is_show" value="2" <?php if($fields['is_show'] == '2') echo 'checked';?>>
           Отправить в корзину
         </label> 
 		<br>

@@ -1,4 +1,4 @@
-<?php
+<?php 
     function print_map($map)
     {
         if(!empty($map))
@@ -18,11 +18,11 @@
         }
     }
 ?>
-<? if (count($messages) > 0): ?>
-	<? foreach($messages as $message): ?>
+<?php if (count($messages) > 0): ?>
+	<?php foreach($messages as $message): ?>
 		<p class="error"><?=$message?></p>
-	<? endforeach;?>
-<? endif ?>
+	<?php endforeach;?>
+<?php endif ?>
 
 <div id="usersettings" class="row">
 <h1>Редактирование меню</h1>
@@ -32,7 +32,7 @@
         <input type="text" name="title" value="<?=$fields['title']?>" placeholder="Введите название меню" />
         <div class="ui-widget-content">
             <ol class="sorting">
-           <?php foreach($menu_pages as $menu_page)
+           <?php  foreach($menu_pages as $menu_page)
             {
                 echo "<li class='item' id_page='{$menu_page['id_page']}'>
                         {$menu_page['title_in_menu']}</li>";
@@ -44,7 +44,7 @@
         </form>
     </div>
     <div class="span10">
-         <? print_map($map);?>
+         <?php print_map($map);?>
     </div>
 
 </div>

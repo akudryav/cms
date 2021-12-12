@@ -1,6 +1,6 @@
 <h2>Дерево страниц</h2>
 <div class="left">
-<?php
+<?php 
 	function print_map($map)
 	{
 		if(!empty($map))

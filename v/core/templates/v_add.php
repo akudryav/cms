@@ -3,11 +3,11 @@
 	<h2>Создание нового шаблона</h2><br>
 		<input type="hidden" name="ttype" value=<?=$type?>>
 		<div class="control-group">
-		<? if (count($messages) > 0): ?>
-			<? foreach($messages as $message): ?>
+		<?php if (count($messages) > 0): ?>
+			<?php foreach($messages as $message): ?>
 				<p class="error"><?=$message?></p>
-			<? endforeach;?>
-		<? endif ?>
+			<?php endforeach;?>
+		<?php endif ?>
 			<label class="control-label" for="name">Имя</label>
 			<div class="controls">
 				<div class="input-prepend">
@@ -20,9 +20,9 @@
 			<div class="controls">
 				<div class="input-prepend">
 					<select name="path">
-						<? foreach($templates as $t): ?>
+						<?php foreach($templates as $t): ?>
 							<option value="<?=$t?>"><?=$t?></option>
-						<? endforeach; ?>
+						<?php endforeach; ?>
 					</select>
 				</div>
 				</div>

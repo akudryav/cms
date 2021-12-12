@@ -1,4 +1,4 @@
-<?php
+<?php 
 	function print_map($map)
 	{
 		if(!empty($map))
@@ -19,11 +19,11 @@
 	}
 ?>
 
-<? if (count($messages) > 0): ?>
-    <? foreach($messages as $message): ?>
+<?php if (count($messages) > 0): ?>
+    <?php foreach($messages as $message): ?>
         <p class="error"><?=$message?></p>
-    <? endforeach;?>
-<? endif ?>
+    <?php endforeach;?>
+<?php endif ?>
 <div id="usersettings" class="row">
 <h1>Создание нового меню</h1>
 
@@ -42,7 +42,7 @@
         </form>
     </div>
     <div class="span10">
-         <? print_map($map);?>
+         <?php print_map($map);?>
     </div>
 
 </div>

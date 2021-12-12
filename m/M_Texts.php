@@ -23,6 +23,8 @@ class M_Texts extends I18n
 	{
 		if(self::$tcache == null)
 			$this->load_texts();
+
+		if(!isset(self::$tcache[$alias])) return;
 		
 		return self::$tcache[$alias];
 	}

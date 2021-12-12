@@ -1,8 +1,8 @@
 <h2>Редактировать текст</h2>
 
-<? foreach($messages as $error): ?>
+<?php foreach($messages as $error): ?>
 	<p class="error"><?=$error?></p>
-<? endforeach; ?>
+<?php endforeach; ?>
 
 <div id="usersettings">
 	
@@ -27,15 +27,15 @@
 		<textarea id="content" rows="8" name="content"><?=$fields['content']?></textarea><br>
         <br>
         <label class="radio">
-          <input type="radio" name="is_show" value="1" <?if($fields['is_show']=='1') echo 'checked';?>>
+          <input type="radio" name="is_show" value="1" <?php if($fields['is_show']=='1') echo 'checked';?>>
           Отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="0" <?if($fields['is_show']=='0') echo 'checked';?>>
+          <input type="radio" name="is_show" value="0" <?php if($fields['is_show']=='0') echo 'checked';?>>
           Не Отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="2" <?if($fields['is_show'] == '2') echo 'checked';?>>
+          <input type="radio" name="is_show" value="2" <?php if($fields['is_show'] == '2') echo 'checked';?>>
           Отправить в корзину
         </label>
 		<input type="submit" name="save" value="Сохранить" class="btn btn-success">

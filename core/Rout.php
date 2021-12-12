@@ -8,8 +8,8 @@ class Rout
 	
 	public function __construct($url)
 	{
-		$info = explode('/', $url);		
-		$this->params = array();
+		$info = explode('/', $url);	
+		$this->params = [];
 
 		foreach ($info as $v)
 		{
@@ -25,7 +25,7 @@ class Rout
 		// en/news
 		// ru/*
 		
-		if(isset($langs[$this->params[0]])){
+		if(isset($this->params[0], $langs[$this->params[0]])){
 			if($langs[$this->params[0]] != $current)
 				I18n::set($this->params[0]);
 				
@@ -40,7 +40,10 @@ class Rout
 		
 		$this->action = 'action_';
 		$this->action .= (isset($this->params[1])) ? $this->params[1] : 'index';
-
+		// пропишем для пустого урла
+		if (0 == count($this->params)) {
+			$this->params[0] = null;
+		}
 		switch ($this->params[0])
 		{
 			case 'widget':

@@ -1,7 +1,10 @@
-.idea/
-.DS_Store
-v/themes/lang/twig_cache
+twig_cache/
 media/logs
 media/docs
 media/cache
+media/images/ck
 media/gallery
+.DS_Store
+.idea/
+composer.lock
+vendor/

@@ -1,4 +1,4 @@
-<?php 
+<?php  
 	function print_tree($map, $shift = 0)
 	{
 		if(!empty($map))
@@ -6,20 +6,20 @@
 			foreach($map as $section)
 			{
 				?><option value="<?=$section['id_page']?>">
-				<? for($i = 0; $i < $shift; $i++)echo '&nbsp;';?>
-				<?=$section['title']?></option><?
-				print_tree($section['children'], $shift + 5); 
+				<?php for($i = 0; $i < $shift; $i++)echo '&nbsp;';?>
+				<?=$section['title']?></option>
+				<?php	print_tree($section['children'], $shift + 5);
 			}
 		}
 	}
 ?>
 <div id="usersettings">
 	<h2>Создание новой страницы</h2>
-<? if (count($messages) > 0): ?>
-	<? foreach($messages as $message): ?>
+<?php if (count($messages) > 0): ?>
+	<?php foreach($messages as $message): ?>
 		<p class="error"><?=$message?></p>
-	<? endforeach;?>
-<? endif ?>
+	<?php endforeach;?>
+<?php endif ?>
 	<form method="post">
 		<div class="control-group">
 			<label class="control-label" for="id_parent">Раздел</label>
@@ -27,7 +27,7 @@
 				<div class="input-prepend">
 					<select name="id_parent">
 						<option value="0">Без раздела</option>
-						<? print_tree($map) ?>
+						<?php print_tree($map) ?>
 					</select>
 				</div>
 			</div>
@@ -71,14 +71,14 @@
 				<div class="input-prepend">
 					<select name="id_menu">
 						<option value="0">Иерархическое</option>
-						<? foreach($menu as $item): ?>
+						<?php foreach($menu as $item): ?>
 							<option value="<?=$item['id_menu']?>"
-								<? if($item['id_menu'] == $fields['id_menu'])
+								<?php if($item['id_menu'] == $fields['id_menu'])
 									echo 'selected'; ?>
 							>
 								<?=$item['title']?>
 							</option>
-						<? endforeach; ?>
+						<?php endforeach; ?>
 					</select>
 				</div>
 			</div>
@@ -97,14 +97,14 @@
 			<div class="controls">
 				<div class="input-prepend">
 					<select name="id_base_template">
-						<? foreach($base_templates as $item): ?>
+						<?php foreach($base_templates as $item): ?>
 							<option value="<?=$item['id_template']?>"
-								<? if($item['id_template'] == $fields['id_base_template'])
+								<?php if($item['id_template'] == $fields['id_base_template'])
 									echo 'selected'; ?>
 							>
 								<?=$item['name']?>
 							</option>
-						<? endforeach; ?>
+						<?php endforeach; ?>
 					</select>
 				</div>
 			</div>
@@ -114,29 +114,28 @@
 			<div class="controls">
 				<div class="input-prepend">
 					<select name="id_template">
-						<? foreach($templates as $item): ?>
+						<?php foreach($templates as $item): ?>
 							<option value="<?=$item['id_template']?>"
-								<? if($item['id_template'] == $fields['id_template'])
+								<?php if($item['id_template'] == $fields['id_template'])
 									echo 'selected'; ?>
 							>
 								<?=$item['name']?>
 							</option>
-						<? endforeach; ?>
+						<?php endforeach; ?>
 					</select>
 				</div>
 			</div>
 		</div>
-		<!--<input type="checkbox" name="is_show" <?if(isset($fields['is_show'])) echo 'checked';?>>-->
         <label class="radio">
-          <input type="radio" name="is_show" value="1" <?if(isset($fields['is_show'])) echo 'checked';?>>
+          <input type="radio" name="is_show" value="1" <?php if(isset($fields['is_show'])) echo 'checked';?>>
           Отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="0" <?if(!isset($fields['is_show'])) echo 'checked';?>>
+          <input type="radio" name="is_show" value="0" <?php if(!isset($fields['is_show'])) echo 'checked';?>>
           Не отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="2" <?if($fields['is_show'] == '2') echo 'checked';?>>
+          <input type="radio" name="is_show" value="2" <?php if($fields['is_show'] == '2') echo 'checked';?>>
           Отправить в корзину
         </label>        
 		<br><br>

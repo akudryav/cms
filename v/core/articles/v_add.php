@@ -1,8 +1,8 @@
 <h2>Создание новой новости</h2>
 
-<? foreach($errors as $error): ?>
+<?php foreach($errors as $error): ?>
 	<p class="error"><?=$error?></p>
-<? endforeach; ?>
+<?php endforeach; ?>
 
 <div id="usersettings">
 	
@@ -32,17 +32,16 @@
 			</div>
 		</div>
 		<textarea id="replace" rows="8" name="content"><?=$fields['content']?></textarea><br>
-		<!--<input type="checkbox" name="is_show" <?if(isset($fields['is_show'])) echo 'checked';?>>-->
         <label class="radio">
-          <input type="radio" name="is_show" value="1" <?if(isset($fields['is_show'])) echo 'checked';?>>
+          <input type="radio" name="is_show" value="1" <?php if(isset($fields['is_show'])) echo 'checked';?>>
           Отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="0" <?if(!isset($fields['is_show'])) echo 'checked';?>>
+          <input type="radio" name="is_show" value="0" <?php if(!isset($fields['is_show'])) echo 'checked';?>>
           Не отображать на сайте
         </label>
         <label class="radio">
-          <input type="radio" name="is_show" value="2" <?if($fields['is_show'] == '2') echo 'checked';?>>
+          <input type="radio" name="is_show" value="2" <?php if($fields['is_show'] == '2') echo 'checked';?>>
           Отправить в корзину
         </label> 
 		<br><br>

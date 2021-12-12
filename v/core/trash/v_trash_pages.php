@@ -1,4 +1,4 @@
-<? extract($navparams); ?>
+<?php extract($navparams); ?>
 <div>
 	<h2>Список удалённых записей </h2>
 	<table class="table table-hover table-bordered">
@@ -8,25 +8,25 @@
 		<th> Заголовок</th>
 		<th> Просмотреть</th>
 		<th> Редактировать</th>
-		<? if(Helpers::can_look('ALL')): ?>
+		<?php if(Helpers::can_look('ALL')): ?>
 		<th> Удалить</th>
-		<? endif; ?>
+		<?php endif; ?>
 	</tr>
 	</thead>
 	<tbody>
-		<? 	$i = ($page_num - 1) * $on_page + 1; ?>
-		<? foreach ($trash_pages as $page): ?>
+		<?php 	$i = ($page_num - 1) * $on_page + 1; ?>
+		<?php foreach ($trash_pages as $page): ?>
 			<tr>
-			<? $id=$page[$pk] ?>
+			<?php $id=$page[$pk] ?>
 				<td><?=$i?></td>
 				<td><?=$page['title'] ?></td>
 				<td><a href="/<?=$table?>/edit/<?=$id ?>"> Редактировать</a></td>
 				<td><a href="/<?=$table?>/restore/<?=$id ?>"> Восстановить</a></td>
-				<? if(Helpers::can_look('ALL')): ?>
+				<?php if(Helpers::can_look('ALL')): ?>
 				<td><a href="/<?=$table?>/delete/<?=$id ?>"> Удалить совсем</a></td>
-				<? endif; ?>
+				<?php endif; ?>
 			</tr>
-		<? $i++; endforeach ?>
+		<?php $i++; endforeach ?>
 	</tbody>
 	</table>
 	<?=$navbar ?>

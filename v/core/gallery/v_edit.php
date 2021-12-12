@@ -1,7 +1,7 @@
 <div class="control-group">
 	<h2>Редактирование данных изображения: 
 	<a href="/gallery/images/<?=$gallery['id_gallery']?>"><?=$gallery['title']?></a> -> <?=$fields['path']?></h2>
-	<a href="<?=IMG_DIR.$fields['path']?>" target="_blanc" data-lightbox="<? $a = explode('.', $fields['path']); echo "$a[0]"; ?>">
+	<a href="<?=IMG_DIR.$fields['path']?>" target="_blanc" data-lightbox="<?php $a = explode('.', $fields['path']); echo "$a[0]"; ?>">
 	<img class="img-polaroid" src="<?=IMG_SMALL_DIR.$fields['path']?>"></a>
 </div><br>
 <div id="usersettings">
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<br>
-		<input type="checkbox" name="is_show" <?php if($fields['is_show']) echo 'checked'; ?> > Отображать на текущей языковой версии
+		<input type="checkbox" name="is_show" <?php  if($fields['is_show']) echo 'checked'; ?> > Отображать на текущей языковой версии
 		<br>
 		<br><p><a href="/gallery/images/<?=$gallery['id_gallery']?>">Вернуться в галерею</a></p><br>
 		<input type="submit" value="Сохранить" class="btn btn-primary btn">

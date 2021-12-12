@@ -1,4 +1,4 @@
-<? extract($navparams); ?>
+<?php extract($navparams); ?>
 <div>
 	<h2>Список страниц (<?=$count?>)</h2>
 	<table class="table table-hover table-bordered">
@@ -9,30 +9,30 @@
 		<th> Просмотреть</th>
 		<th> Редактировать</th>
 		<th> Переместить в корзину</th>
-		<? if(Helpers::can_look('ALL')): ?>
+		<?php if(Helpers::can_look('ALL')): ?>
 		<th> Удалить</th>
-		<? endif; ?>
+		<?php endif; ?>
 		<th> Статус</th>
 	</tr>
 	</thead>
 	<tbody>
-		<? 	$i = ($page_num - 1) * $on_page + 1; ?>
-		<? foreach ($pages as $page): ?>
-			<tr <? if($page['is_show'] == 0) echo 'class="no_public_tr"'; echo 'title="Не выводится на данной языковой версии"'; ?> >
-			<? $id=$page['id_page'] ?>
+		<?php 	$i = ($page_num - 1) * $on_page + 1; ?>
+		<?php foreach ($pages as $page): ?>
+			<tr <?php if($page['is_show'] == 0) echo 'class="no_public_tr"'; echo 'title="Не выводится на данной языковой версии"'; ?> >
+			<?php $id=$page['id_page'] ?>
 				<td><?=$i?></td>
 				<td><?=$page['title'] ?></td>
 				<td><a href="<?=$page['full_cache_url'] ?>" target="_blanc"> Просмотреть</a></td>
 				<td><a href="/pages/edit/<?=$id; ?>"> Редактировать</a></td>
-				<td><? if($page['is_show']==0 || $page['is_show']==1): ;?>
+				<td><?php if($page['is_show']==0 || $page['is_show']==1): ;?>
                      <a href="/pages/remove/<?=$id; ?>"> Переместить в корзину</a>
-                     <? endif; ?>
+                     <?php endif; ?>
                 </td>
-				<? if(Helpers::can_look('ALL')): ?>
+				<?php if(Helpers::can_look('ALL')): ?>
 				<td><a href="/pages/delete/<?=$id; ?>" onClick="javascript: return confirm('Вы действительно хотите удалить? Данное действие удалит страницу со всех языковых версий!')"> Удалить</a></td>
-				<? endif; ?>
+				<?php endif; ?>
 				<td> 
-				<? if ($page['is_show'] == 1) 
+				<?php if ($page['is_show'] == 1) 
 					echo "Опубликована"; 
 				  else if($page['is_show'] == 0)
 					echo "Не опубликована"; 
@@ -41,7 +41,7 @@
 				?>
 				</td>
 			</tr>
-		<? $i++; endforeach ?>
+		<?php $i++; endforeach ?>
 	</tbody>
 	</table>
 	<?=$navbar ?>

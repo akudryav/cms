@@ -18,7 +18,7 @@
 								'title' => '200',
 								'keywords' => '500',
 								'description' => '1000',
-								'content' => '8000'
+								'content' => '30000'
 								),
 			'range' => array(
 						//количество символв в диапазоне от до
