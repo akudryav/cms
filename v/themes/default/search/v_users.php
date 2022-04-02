@@ -1,8 +1,8 @@
 <div>
 	<h2>Юзеры</h2>
-	<? foreach ($records as $user): ?>
+	<?php foreach ($records as $user): ?>
 		<p>
 			<?=$user['name'] ?>
 		</p>
-	<? endforeach; ?>
+	<?php endforeach; ?>
 </div>

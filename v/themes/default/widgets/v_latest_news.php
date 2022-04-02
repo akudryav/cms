@@ -1,5 +1,5 @@
 
-<? foreach($news as $new): ?>
+<?php foreach($news as $new): ?>
 
 <article class="news__item">
   <div class="news__item-image">
@@ -13,4 +13,4 @@
   </div>
 </article>
 
-<? endforeach; ?>
+<?php endforeach; ?>

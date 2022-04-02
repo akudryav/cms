@@ -1,10 +1,10 @@
 <div>
 	<h2>Результаты поиска</h2>
-	<? if(count($templates) > 0): ?>
-		<? foreach ($templates as $template): ?>
+	<?php if(count($templates) > 0): ?>
+		<?php foreach ($templates as $template): ?>
 			<?=$template?>
-		<? endforeach; ?>
-	<? else: ?>
+		<?php endforeach; ?>
+	<?php else: ?>
 		Ничего не найдено
-	<? endif; ?>
+	<?php endif; ?>
 </div>

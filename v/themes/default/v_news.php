@@ -1,6 +1,6 @@
 
 <h1 class="title">Блог <a href="javascript:window.print();" class="print" title="Print this page">Print</a></h1>
-<? foreach($news as $new): ?>
+<?php foreach($news as $new): ?>
 <article class="news__item">
   <div class="news__item-image">
     <a href="news/post/<?=$new['id_article'];?>"><img src="<?=IMG_DIR . $new['path'];?>" width="116" height="77" alt="" /></a>
@@ -12,5 +12,5 @@
     <div class="news__item-more"><a href="news/post/<?=$new['id_article'];?>">Читать далее</a></div>
   </div>
 </article>
-<? endforeach; ?>
+<?php endforeach; ?>
 <?=$navbar ?>

@@ -6,33 +6,33 @@
 	$page_num - номер текущей страницы
 	$url_self - url адрес от корня без номера с страницы. Например, /pages/all или /articles/editor/
 -->
-<? extract($navparams); ?>
-<? if($max_page > 1):?>
+<?php extract($navparams); ?>
+<?php if($max_page > 1):?>
 <div class="pagination">
   <ul>
-	<? if($page_num <= 1): ?>
+	<?php if($page_num <= 1): ?>
     <li><span>Начало</span></li>
 	<li><span>Пред.</span></li>
-	<? else: ?>
+	<?php else: ?>
 	<li><a href="<?=$url_self?>">Начало</a></li>
 	<li><a href="<?=$url_self . ($page_num - 1)?>">Пред.</a></li>
-	<? endif; ?>
-	<? for($i = $left; $i <= $right; $i++):?>
-			<? if($i <1 || $i > $max_page) continue;?>
-			<? if($i == $page_num): ?>
+	<?php endif; ?>
+	<?php for($i = $left; $i <= $right; $i++):?>
+			<?php if($i <1 || $i > $max_page) continue;?>
+			<?php if($i == $page_num): ?>
     <li><span><strong><?=$i?></strong></span></li>
-	<? else: ?>
+	<?php else: ?>
 	<li><a href="<?=$url_self . $i?>"><?=$i?></a></li>
-	<? endif; ?>
-	<? endfor; ?>
+	<?php endif; ?>
+	<?php endfor; ?>
 	
-	<? if($page_num * $on_page >= $count): ?>
+	<?php if($page_num * $on_page >= $count): ?>
     <li><span>След.</span></li>
 	<li><span>Конец</span></li>
-	<? else: ?>
+	<?php else: ?>
 	<li><a href="<?=$url_self . ($page_num + 1)?>">След.</a></li>
 	<li><a href="<?=$url_self . $max_page?>">Конец</a></li>
-	<? endif; ?>
+	<?php endif; ?>
   </ul>
 </div>
-<? endif; ?>
+<?php endif; ?>
